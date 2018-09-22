@@ -1,3 +1,3 @@
-# weather_flutter
+# Weather Flutter
 
 Just fluttering about.

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'weather_card.dart';
+import 'package:geocoder/geocoder.dart';
+
+import 'package:location/location.dart';
+import 'package:flutter/services.dart';
 
 class WeatherPage extends StatefulWidget {
   WeatherPage({Key key, this.title}) : super(key: key);
@@ -25,10 +30,29 @@ class _WeatherPageState extends State<WeatherPage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            WeatherCard(),
+            WeatherCard(lat: 39.055476, lng: -77.120931),
+            //WeatherCard(lat: 85.3240, lng: 27.7172),
           ],
         ),
       ),
     );
   }
+
+  void getCurrentLocation() async {
+    var currentLocation = <String, double>{};
+    var location = new Location();
+    Address address;
+
+    try {
+      currentLocation = await location.getLocation();
+      var addresses = await Geocoder.local.findAddressesFromCoordinates(
+          new Coordinates(
+              currentLocation["latitude"], currentLocation["longitude"]));
+      address = addresses.first;
+    } on PlatformException {
+      return;
+    }
+  }
+
+  void 
 }
