@@ -6,12 +6,12 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Weather',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new WeatherPage(title: 'Weather'),
+      home: WeatherPage(title: 'Weather'),
     );
   }
 }

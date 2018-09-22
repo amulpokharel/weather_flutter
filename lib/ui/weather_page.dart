@@ -31,7 +31,6 @@ class _WeatherPageState extends State<WeatherPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             WeatherCard(lat: 39.055476, lng: -77.120931),
-            //WeatherCard(lat: 85.3240, lng: 27.7172),
           ],
         ),
       ),
@@ -53,6 +52,4 @@ class _WeatherPageState extends State<WeatherPage> {
       return;
     }
   }
-
-  void 
 }

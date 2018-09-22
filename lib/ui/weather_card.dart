@@ -29,7 +29,6 @@ class _WeatherCardState extends State<WeatherCard> {
 
     return new Container(
         child: new Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
               "$locStr",
@@ -46,6 +45,7 @@ class _WeatherCardState extends State<WeatherCard> {
                   color: Color.fromARGB(100, 51, 51, 51)),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.network(
                   "http://openweathermap.org/img/w/$iconStr.png",
