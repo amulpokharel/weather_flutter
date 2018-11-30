@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:core';
 import 'package:geocoder/geocoder.dart';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
